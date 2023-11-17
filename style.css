@@ -184,4 +184,40 @@ li {
     color: #000000;
     font-size: 32px;
     font-weight: 500;
+    text-decoration: none;
+}
+
+.about-section__link:hover{
+    cursor: pointer;
+}
+
+.do-section{
+    font-family:'bauhaus 93';
+    margin-top: 270px;
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px repeat(3, 95px);
+    
+}
+
+.do-section__name{
+    text-transform: uppercase;
+    font-size: 64px;
+}
+
+.do-section__line{
+    vertical-align: top;
+}
+
+.do-section__list-full-info{
+    display: flex;
+}
+
+.do-section__naming, .do-section__number{
+    font-size: 32px;
+}
+
+.do-section__naming{
+    margin: 0 auto;
 }
