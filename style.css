@@ -27,19 +27,19 @@ body::-webkit-scrollbar {
     /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
-body{
-    background-color: #292929;
+body {
+    background-color: #1f1f1f;
     color: #FFFFFF;
     overflow-y: scroll;
     font-family: 'Inter';
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 1440px;
 }
 
-.container_home-section-name{
+.container_home-section-name {
     margin: 0 auto;
     max-width: 2560px;
 }
@@ -51,12 +51,40 @@ li {
     padding: 0;
 }
 
-.home-section__name{
+.home-section__name {
     font-family: 'bauhaus 93';
     font-size: 350px;
     font-weight: 400;
     text-align: center;
     line-height: 90%;
+    text-rendering: optimizeLegibility;
+    animation: colorful 10s linear infinite;
+}
+
+@keyframes colorful {
+    0% {
+        text-shadow: 3px 0 0 blue, -3px 0 0 blue, 0 3px 0 blue, 0 -3px 0 blue, 2px 2px blue, -1px -1px 0 blue, 2px -1px 0 blue, -1px 2px 0 blue;
+    }
+
+    20% {
+        text-shadow: 3px 0 0 violet, -3px 0 0 violet, 0 3px 0 violet, 0 -3px 0 violet, 2px 2px violet, -1px -1px 0 violet, 2px -1px 0 violet, -1px 2px 0 violet;
+    }
+
+    40% {
+        text-shadow: 3px 0 0 red, -3px 0 0 red, 0 3px 0 red, 0 -3px 0 red, 2px 2px red, -1px -1px 0 red, 2px -1px 0 red, -1px 2px 0 red;
+    }
+
+    60% {
+        text-shadow: 3px 0 0 yellow, -3px 0 0 yellow, 0 3px 0 yellow, 0 -3px 0 yellow, 2px 2px yellow, -1px -1px 0 yellow, 2px -1px 0 yellow, -1px 2px 0 yellow;
+    }
+
+    80% {
+        text-shadow: 3px 0 0 green, -3px 0 0 green, 0 3px 0 green, 0 -3px 0 green, 2px 2px green, -1px -1px 0 green, 2px -1px 0 green, -1px 2px 0 green;
+    }
+
+    100% {
+        text-shadow: 3px 0 0 blue, -3px 0 0 blue, 0 3px 0 blue, 0 -3px 0 blue, 1px 2px blue, -1px -1px 0 blue, 2px -1px 0 blue, -1px 2px 0 blue;
+    }
 }
 
 @-webkit-keyframes scroll {
@@ -64,6 +92,7 @@ li {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
+
     100% {
         -webkit-transform: translate(-100%, 0);
         transform: translate(-100%, 0)
@@ -75,28 +104,30 @@ li {
         -moz-transform: translate(0, 0);
         transform: translate(0, 0);
     }
+
     100% {
         -moz-transform: translate(-100%, 0);
         transform: translate(-100%, 0)
     }
 }
- 
+
 @keyframes scroll {
     0% {
         transform: translate(0, 0);
     }
+
     100% {
         transform: translate(-100%, 0)
     }
 }
- 
+
 .home-section__name {
     display: block;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
- 
+
 .home-section__name span {
     display: inline-block;
     padding-left: 100%;
@@ -105,37 +136,37 @@ li {
     animation: scroll 80s infinite linear;
 }
 
-.home-section__content{
+.home-section__content {
     display: grid;
     margin: 150px 0;
     height: 320px;
     grid-template-columns: 45% 55%;
-    grid-template-rows: 1fr  40px 1fr;
+    grid-template-rows: 1fr 40px 1fr;
 }
 
-.home-section__greeting, 
-.home-section__about{
+.home-section__greeting,
+.home-section__about {
     font-size: 48px;
     font-weight: 500;
 }
 
-.home-section__greeting{
+.home-section__greeting {
     width: 277px;
-    margin: 0 0 0 auto; 
+    margin: 0 0 0 auto;
 }
 
-.home-section__line{
+.home-section__line {
     margin: 40px 0 0 auto;
     grid-area: 2/1/2/1;
 }
 
-.home-section__about{
+.home-section__about {
     width: 635px;
     padding-left: 45px;
     grid-area: 2/2/3/2;
 }
 
-.about-section{
+.about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -143,81 +174,171 @@ li {
 }
 
 .about-section__text,
-.about-section__photo{
+.about-section__photo {
     height: 650px;
     background-color: #FFFFFF;
     border-radius: 20px;
 }
 
-.about-section__text-paragraph{
+.about-section__text-paragraph {
     color: #000000;
     font-size: 32px;
     font-weight: 500;
     margin: 55px 115px 0 25px;
 }
 
-.about-section__button-link-wrapper{
+.about-section__button-link-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 32px 0 26px;
 }
 
-.about-section__text{
+.about-section__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 25px;
 }
-.about-section__button{
+
+.about-section__button,
+.portfolio-section__button {
     width: 200px;
+    height: 32px;
     text-transform: uppercase;
-    color:#FFFFFF;
-    padding: 7px 26px;
+    color: #FFFFFF;
+    padding-top: 7px;
+    text-align: center;
     font-size: 15px;
     font-weight: 500;
-    border-radius: 15px;
-    background-color: #292929;
+    border-radius: 13px;
+    background-color: #1f1f1f;
 }
 
-.about-section__link{
+.about-section__link {
     color: #000000;
     font-size: 32px;
     font-weight: 500;
     text-decoration: none;
 }
 
-.about-section__link:hover{
+.about-section__link:hover {
     cursor: pointer;
 }
 
-.do-section{
-    font-family:'bauhaus 93';
-    margin-top: 270px;
+.do-section {
+    font-family: 'bauhaus 93';
+    margin-top: 250px;
     padding-left: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px repeat(3, 95px);
-    
+
 }
 
-.do-section__name{
+.do-section__name {
     text-transform: uppercase;
     font-size: 64px;
 }
 
-.do-section__line{
+.do-section__line {
     vertical-align: top;
 }
 
-.do-section__list-full-info{
+.do-section__list-full-info {
     display: flex;
 }
 
-.do-section__naming, .do-section__number{
+.do-section__naming,
+.do-section__number {
     font-size: 32px;
 }
 
-.do-section__naming{
+.do-section__naming {
     margin: 0 auto;
+}
+
+.do-section__list-full-info:hover {
+    .do-section__naming {
+        background-image: linear-gradient(-225deg,
+                #231557 0%,
+                #44107a 19%,
+                #ff1361 38%,
+                #fff800 57%,
+                #ff1361 76%,
+                #44107a 90%,
+                #231557 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+    }
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.portfolio-section {
+    margin-top: 200px;
+    color: #000000;
+}
+
+.portfolio-section__case {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 45px;
+    padding-left: 25px;
+}
+
+.portfolio-section__case-info {
+    padding-bottom: 45px;
+}
+
+.portfolio-section__case-name {
+    font-family: 'bauhaus 93';
+    font-size: 64px;
+    line-height: 130%;
+    width: 335px;
+    padding-top: 55px;
+}
+
+.portfolio-section__case-desc {
+    font-size: 15px;
+    font-weight: 400;
+    width: 325px;
+    margin-top: 330px;
+}
+
+.portfolio-section__button {
+    width: 215px;
+    margin-top: 50px;
+}
+
+.portfolio-section__button:hover {
+    cursor: pointer;
+    color: #8afa95;
+}
+
+.portfolio-section__button-arrow {
+    padding-left: 5px;
+}
+
+.portfolio-section__case-image-wrapper {
+    background-color: #1f1f1f;
+    padding-bottom: 45px;
+    border: 4px solid #FFFFFF;
+    border-radius: 0 20px 20px 0;
+}
+
+.portfolio-section__case-image {
+    width: 50%;
 }
