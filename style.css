@@ -63,27 +63,27 @@ li {
 
 @keyframes colorful {
     0% {
-        text-shadow: 3px 0 0 blue, -3px 0 0 blue, 0 3px 0 blue, 0 -3px 0 blue, 2px 2px blue, -1px -1px 0 blue, 2px -1px 0 blue, -1px 2px 0 blue;
+        text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
     }
 
     20% {
-        text-shadow: 3px 0 0 violet, -3px 0 0 violet, 0 3px 0 violet, 0 -3px 0 violet, 2px 2px violet, -1px -1px 0 violet, 2px -1px 0 violet, -1px 2px 0 violet;
+        text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 2px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
     }
 
     40% {
-        text-shadow: 3px 0 0 red, -3px 0 0 red, 0 3px 0 red, 0 -3px 0 red, 2px 2px red, -1px -1px 0 red, 2px -1px 0 red, -1px 2px 0 red;
+        text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
     }
 
     60% {
-        text-shadow: 3px 0 0 yellow, -3px 0 0 yellow, 0 3px 0 yellow, 0 -3px 0 yellow, 2px 2px yellow, -1px -1px 0 yellow, 2px -1px 0 yellow, -1px 2px 0 yellow;
+        text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 2px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
     }
 
     80% {
-        text-shadow: 3px 0 0 green, -3px 0 0 green, 0 3px 0 green, 0 -3px 0 green, 2px 2px green, -1px -1px 0 green, 2px -1px 0 green, -1px 2px 0 green;
+        text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
     }
 
     100% {
-        text-shadow: 3px 0 0 blue, -3px 0 0 blue, 0 3px 0 blue, 0 -3px 0 blue, 1px 2px blue, -1px -1px 0 blue, 2px -1px 0 blue, -1px 2px 0 blue;
+        text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 1px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
     }
 }
 
@@ -140,7 +140,7 @@ li {
     display: grid;
     margin: 150px 0;
     height: 320px;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 40px 1fr;
 }
 
@@ -180,6 +180,11 @@ li {
     border-radius: 20px;
 }
 
+.about-section__photo {
+    max-width: 650px;
+    overflow: hidden;
+}
+
 .about-section__text-paragraph {
     color: #000000;
     font-size: 32px;
@@ -198,12 +203,11 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
-.about-section__button,
-.portfolio-section__button {
-    width: 200px;
+.button {
+    width: 193px;
     height: 32px;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -215,15 +219,21 @@ li {
     background-color: #1f1f1f;
 }
 
-.about-section__link {
-    color: #000000;
-    font-size: 32px;
-    font-weight: 500;
+.button-link {
     text-decoration: none;
+    color: #FFFFFF;
 }
 
-.about-section__link:hover {
+.button-arrow {
+    padding-left: 5px;
+}
+
+.button:hover {
     cursor: pointer;
+
+    .button-link {
+        color: #8afa95;
+    }
 }
 
 .do-section {
@@ -233,12 +243,18 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px repeat(3, 95px);
-
 }
 
 .do-section__name {
     text-transform: uppercase;
     font-size: 64px;
+}
+
+.do-section__list-item {
+    border-top: 3px solid #ffffff;
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
 }
 
 .do-section__line {
@@ -247,6 +263,8 @@ li {
 
 .do-section__list-full-info {
     display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .do-section__naming,
@@ -261,13 +279,12 @@ li {
 .do-section__list-full-info:hover {
     .do-section__naming {
         background-image: linear-gradient(-225deg,
-                #231557 0%,
-                #44107a 19%,
-                #ff1361 38%,
-                #fff800 57%,
-                #ff1361 76%,
-                #44107a 90%,
-                #231557 100%);
+                #ffffff 0%,
+                #8afa95 20%,
+                #ffffff 40%,
+                #8afa95 60%,
+                #ffffff 80%,
+                #8afa95 100%);
         background-size: auto auto;
         background-clip: border-box;
         background-size: 200% auto;
@@ -275,7 +292,7 @@ li {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 2s linear infinite;
+        animation: textclip 3s linear infinite;
     }
 }
 
@@ -283,7 +300,7 @@ li {
     to {
         background-position: 200% center;
     }
-}
+} 
 
 .portfolio-section {
     margin-top: 200px;
@@ -291,54 +308,46 @@ li {
 }
 
 .portfolio-section__case {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 20px;
     margin: 0 45px;
-    padding-left: 25px;
 }
 
 .portfolio-section__case-info {
-    padding-bottom: 45px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
 }
 
 .portfolio-section__case-name {
     font-family: 'bauhaus 93';
     font-size: 64px;
     line-height: 130%;
-    width: 335px;
+    max-width: 335px;
     padding-top: 55px;
 }
 
 .portfolio-section__case-desc {
     font-size: 15px;
     font-weight: 400;
-    width: 325px;
-    margin-top: 330px;
+    max-width: 325px;
+    margin-top: auto;
+    margin-bottom: 40px;
 }
 
 .portfolio-section__button {
     width: 215px;
-    margin-top: 50px;
-}
-
-.portfolio-section__button:hover {
-    cursor: pointer;
-    color: #8afa95;
-}
-
-.portfolio-section__button-arrow {
-    padding-left: 5px;
 }
 
 .portfolio-section__case-image-wrapper {
-    background-color: #1f1f1f;
-    padding-bottom: 45px;
-    border: 4px solid #FFFFFF;
+    /* border: 4px solid #FFFFFF; */
     border-radius: 0 20px 20px 0;
+    overflow: hidden;
 }
 
 .portfolio-section__case-image {
-    width: 50%;
+    width: clamp(400px, 45vw, 650px);
 }
