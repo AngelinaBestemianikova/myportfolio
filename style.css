@@ -17,6 +17,11 @@
     }
 }
 
+@font-face {
+	font-family: 'bauhaus'; 
+	src: url(./fonts/bauhaus.ttf); 
+}
+ 
 .scrolling-wrapper {
     scrollbar-width: none;
 }
@@ -52,80 +57,66 @@ li {
 }
 
 .home-section__name {
-    font-family: 'bauhaus 93';
+    font-family: 'bauhaus';
+    font-weight: 400;
     font-size: 350px;
     font-weight: 400;
     text-align: center;
     line-height: 90%;
     text-rendering: optimizeLegibility;
     animation: colorful 10s linear infinite;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-@keyframes colorful {
-    0% {
+/* @keyframes colorful {
+    0%, 40%, 80% {
         text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
     }
 
-    20% {
+    20%, 60% {
         text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 2px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
-    }
-
-    40% {
-        text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
-    }
-
-    60% {
-        text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 2px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
-    }
-
-    80% {
-        text-shadow: 3px 0 0 #8afa95, -3px 0 0 #8afa95, 0 3px 0 #8afa95, 0 -3px 0 #8afa95, 2px 2px #8afa95, -1px -1px 0 #8afa95, 2px -1px 0 #8afa95, -1px 2px 0 #8afa95;
     }
 
     100% {
         text-shadow: 3px 0 0 #ffffff, -3px 0 0 #ffffff, 0 3px 0 #ffffff, 0 -3px 0 #ffffff, 1px 2px #ffffff, -1px -1px 0 #ffffff, 2px -1px 0 #ffffff, -1px 2px 0 #ffffff;
     }
-}
+} */
 
 @-webkit-keyframes scroll {
-    0% {
+    0%, 100% {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
 
     100% {
         -webkit-transform: translate(-100%, 0);
-        transform: translate(-100%, 0)
+        transform: translate(-100%, 0);
     }
 }
 
 @-moz-keyframes scroll {
-    0% {
+    0%, 100% {
         -moz-transform: translate(0, 0);
         transform: translate(0, 0);
     }
 
     100% {
         -moz-transform: translate(-100%, 0);
-        transform: translate(-100%, 0)
+        transform: translate(-100%, 0);
     }
 }
 
 @keyframes scroll {
-    0% {
+    0%, 100% {
         transform: translate(0, 0);
     }
 
     100% {
-        transform: translate(-100%, 0)
+        transform: translate(-100%, 0);
     }
-}
-
-.home-section__name {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .home-section__name span {
@@ -139,6 +130,7 @@ li {
 .home-section__content {
     display: grid;
     margin: 150px 0;
+    margin-right: 20px;
     height: 320px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 40px 1fr;
@@ -162,11 +154,11 @@ li {
 
 .home-section__about {
     width: 635px;
-    padding-left: 45px;
+    padding-left: 35px;
     grid-area: 2/2/3/2;
 }
 
-.about-section {
+.about-section > .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -236,9 +228,9 @@ li {
     }
 }
 
-.do-section {
+.do-section > .container {
     font-family: 'bauhaus 93';
-    margin-top: 250px;
+    margin-top: 200px;
     padding-left: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -248,6 +240,7 @@ li {
 .do-section__name {
     text-transform: uppercase;
     font-size: 64px;
+    font-weight: 400;
 }
 
 .do-section__list-item {
@@ -278,7 +271,7 @@ li {
 
 .do-section__list-full-info:hover {
     .do-section__naming {
-        background-image: linear-gradient(-225deg,
+        /* background-image: linear-gradient(-225deg,
                 #ffffff 0%,
                 #8afa95 20%,
                 #ffffff 40%,
@@ -292,7 +285,9 @@ li {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 3s linear infinite;
+        animation: textclip 3s linear infinite; */
+        animation: tada;
+        animation-duration: 1s;
     }
 }
 
@@ -312,7 +307,11 @@ li {
     justify-content: space-between;
     background-color: #fff;
     border-radius: 20px;
-    margin: 0 45px;
+    margin: 75px 45px 0 45px;
+}
+
+.portfolio-section__case:first-child{
+    margin-top: 0;
 }
 
 .portfolio-section__case-info {
@@ -325,9 +324,14 @@ li {
 .portfolio-section__case-name {
     font-family: 'bauhaus 93';
     font-size: 64px;
+    font-weight: 400;
     line-height: 130%;
-    max-width: 335px;
+    max-width: 445px;
     padding-top: 55px;
+}
+
+.portfolio-section__case-name-first{
+    max-width: 335px;
 }
 
 .portfolio-section__case-desc {
@@ -342,12 +346,22 @@ li {
     width: 215px;
 }
 
+.portfolio-section__two-buttons{
+    display: flex;
+}
+
+.portfolio-section__two-buttons > .portfolio-section__button:last-child{
+    margin-left: 20px;
+    width: 198px;
+}
+
 .portfolio-section__case-image-wrapper {
-    /* border: 4px solid #FFFFFF; */
     border-radius: 0 20px 20px 0;
     overflow: hidden;
+    border: 4px solid #FFFFFF;
 }
 
 .portfolio-section__case-image {
     width: clamp(400px, 45vw, 650px);
+    height: 100%;
 }
