@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'bauhaus';
-    src: url(./fonts/bauhaus.ttf);
+    src: url('fonts/bauhaus-93.ttf');
 }
 
 .scrolling-wrapper {
@@ -64,7 +64,7 @@ li {
     text-align: center;
     line-height: 90%;
     text-rendering: optimizeLegibility;
-    animation: colorful 10s linear infinite;
+    /* animation: colorful 10s linear infinite; */
     display: block;
     width: 100%;
     white-space: nowrap;
@@ -239,7 +239,7 @@ li {
     }
 }
 
-.do-section>.container {
+.do-section > .container {
     font-family: 'bauhaus 93';
     margin-top: 200px;
     padding-left: 40px;
@@ -382,7 +382,7 @@ li {
 }
 
 footer {
-    margin: 170px 0 90px 0;
+    margin: 170px 0 0;
     font-size: 32px;
     line-height: 160%;
 }
@@ -438,6 +438,7 @@ footer {
 }
 
 .footer__rectangle1 {
+    margin-top: 50px;
     height: 2px;
 }
 
@@ -495,4 +496,5 @@ footer {
 
 .footer__rectangle15 {
     height: 30px;
+    margin-bottom: 0;
 }
