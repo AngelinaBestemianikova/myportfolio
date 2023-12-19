@@ -5,13 +5,10 @@
 }
 
 ::-webkit-scrollbar {
-    /* Disable scrollbar Edge */
     width: 0;
 }
 
 @-moz-document url-prefix() {
-
-    /* Disable scrollbar Firefox */
     html {
         scrollbar-width: none;
     }
@@ -29,7 +26,6 @@
 body::-webkit-scrollbar {
     width: 0;
     background: transparent;
-    /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
 body {
@@ -220,9 +216,7 @@ li {
     background-color: #1f1f1f;
 }
 
-.button-link,
-.footer__links,
-#back-top a {
+a {
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -235,7 +229,7 @@ li {
     cursor: pointer;
 
     .button-link {
-        color: #8afa95;
+        color: #febe98;
     }
 }
 
@@ -248,7 +242,8 @@ li {
     grid-template-rows: 70px repeat(3, 95px);
 }
 
-.do-section__name {
+.do-section__name,
+.portfolio-section__headline {
     text-transform: uppercase;
     font-size: 64px;
     font-weight: 400;
@@ -276,27 +271,16 @@ li {
     font-size: 32px;
 }
 
-.do-section__naming {
+.do-section__list-full-info a {
     margin: 0 auto;
+}
+
+.do-section__naming:hover{
+    cursor: pointer;
 }
 
 .do-section__list-full-info:hover {
     .do-section__naming {
-        /* background-image: linear-gradient(-225deg,
-                #ffffff 0%,
-                #8afa95 20%,
-                #ffffff 40%,
-                #8afa95 60%,
-                #ffffff 80%,
-                #8afa95 100%);
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        color: #fff;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 3s linear infinite; */
         animation: tada;
         animation-duration: 1s;
     }
@@ -309,8 +293,13 @@ li {
 }
 
 .portfolio-section {
-    margin-top: 200px;
     color: #000000;
+}
+
+.portfolio-section__headline{
+    color: #FFFFFF;
+    font-family: 'bauhaus 93';
+    margin: 180px 45px 0 45px;
 }
 
 .portfolio-section__case {
@@ -337,7 +326,7 @@ li {
     font-family: 'bauhaus 93';
     font-size: 64px;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 120%;
 }
 
 .portfolio-section__case-name {
@@ -405,7 +394,7 @@ footer {
 }
 
 .footer__links:hover {
-    color: #8afa95;
+    color: #febe98;
 }
 
 .footer__info-social {
@@ -428,11 +417,11 @@ footer {
 
 #back-top a:hover span {
     cursor: pointer;
-    color: #8afa95;
+    color: #febe98;
 }
 
 [class^="footer__rectangle"] {
-    background-color: #bdbdbd;
+    background-color: #c8c8c8;
     width: 100%;
     margin-bottom: 15px;
 }
