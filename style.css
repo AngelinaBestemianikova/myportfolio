@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    cursor: url('img/Ellipse.png'), auto;
+}
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -226,8 +229,6 @@ a {
 }
 
 .button:hover {
-    cursor: pointer;
-
     .button-link {
         color: #febe98;
     }
@@ -273,12 +274,8 @@ a {
     font-size: 32px;
 }
 
-.do-section__list-full-info a {
+.do-section__naming {
     margin: 0 auto;
-}
-
-.do-section__naming:hover{
-    cursor: pointer;
 }
 
 .do-section__list-full-info:hover {
@@ -309,7 +306,7 @@ a {
     background-color: #fff;
     color: #000000;
     border-radius: 20px;
-    height: 270px;
+    height: 280px;
     display: flex;
     flex-direction: column;
 }
@@ -342,8 +339,6 @@ a {
 .cv__card-skills,
 .cv__card-tools {
     margin: 0 25px;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, auto)); */
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
@@ -352,8 +347,11 @@ a {
 
 .cv__card-skills span,
 .cv__card-tools span{
-    margin-right: 30px;
-    margin-top: 10px;
+    margin-right: 15px;
+    margin-top: 12px;
+    /* padding: 5px 15px;
+    border-radius: 50px;
+    background-color: pink; */
 }
 
 .portfolio-section {
@@ -479,7 +477,6 @@ footer {
 }
 
 #back-top a:hover span {
-    cursor: pointer;
     color: #febe98;
 }
 
@@ -549,4 +546,53 @@ footer {
 .footer__rectangle15 {
     height: 30px;
     margin-bottom: 0;
+}
+
+/*coursor*/
+
+html, 
+html *, 
+body, 
+body * {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  mix-blend-mode: normal;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  z-index:9;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(254, 190, 152, 0.72);
+  border: solid;
+  border-radius: 50%;
+  border-width: 0px;
+  border-color: #000;
+}
+
+.cursor-dot-outline {
+  z-index:8;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(254, 190, 152, 0.2);
+  border: solid;
+  border-radius: 50%;
+  border-width: 0px;
+  border-color: #000;
 }
