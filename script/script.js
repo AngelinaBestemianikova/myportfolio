@@ -8,10 +8,10 @@ $(document).ready(function () {
         });
     });
 
-    $('#Productscroll, #UI\\/UXscroll').click(function (e) {
+    $('#Productscroll, #UI-UXscroll').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#UI\\/UX').offset().top
+            scrollTop: $('#UI-UX').offset().top
         }, 600);
     });
 
