@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    cursor: url('img/Ellipse.png'), auto;
-}
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -160,7 +156,7 @@ li {
 @media (max-width: 575px) {
     .home-section__content {
         grid-template-columns: 1fr;
-        grid-template-rows: 80px 60px 16vw;
+        grid-template-rows: 80px 60px max-content;
     }
 
     .home-section__about {
@@ -216,10 +212,10 @@ li {
 
 .about-section__text-paragraph {
     color: #000000;
-    font-size: clamp(28px, 2.6vw, 32px);
     font-weight: 500;
+    font-size: 32px;
     margin: 55px 115px 0 25px;
-    margin-right: clamp(40px, 7vw, 115px);
+    margin-right: clamp(25px, 7vw, 115px);
 }
 
 .about-section__button-link-wrapper {
@@ -267,13 +263,14 @@ a {
 @media (max-width: 767px) {
     .about-section>.container {
         grid-template-columns: 1fr;
-        grid-template-rows: 550px 400px;
+        grid-template-rows: 550px max-content;
         gap: 20px;
     }
 
     .about-section__text {
         height: 400px;
         grid-row: 2;
+        height: max-content;
     }
 
     .about-section__photo {
@@ -281,11 +278,19 @@ a {
         max-width: 676px;
         grid-row: 1;
     }
+
+    .about-section__text-paragraph {
+        margin-top: clamp(25px, 7vw, 55px);
+    }
+
+    .about-section__button-link-wrapper {
+        margin-top: clamp(75px, 17vw, 125px);
+    }
 }
 
 .do-section>.container {
     font-family: 'bauhaus';
-    margin-top: 200px;
+    margin-top: clamp(90px, 30vw, 180px);
     padding-left: clamp(20px, 7.6vw, 45px);
     padding-right: clamp(20px, 7.6vw, 45px);
     display: grid;
@@ -381,13 +386,13 @@ a {
     display: grid;
     grid-template-columns: 26% repeat(2, 1fr);
     gap: 25px;
-    margin-top: 75px;
+    margin-top: clamp(40px, 7vw, 75px);
     padding-left: clamp(20px, 7.6vw, 45px);
     padding-right: clamp(20px, 7.6vw, 45px);
 }
 
 .cv__name {
-    margin-top: 150px;
+    margin-top: clamp(90px, 30vw, 150px);
     padding-left: clamp(20px, 7.6vw, 45px);
     padding-right: clamp(20px, 7.6vw, 45px);
 }
@@ -468,12 +473,29 @@ a {
 @media (max-width: 767px) {
     .cv__all-cards {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 310px);
+        grid-template-rows: 310px repeat(2, max-content);
         gap: 20px;
+    }
+
+    .cv__card-skills,
+    .cv__card-tools {
+        margin-top: clamp(40px, 15vw, 100px);
     }
 
     .cv__card3 {
         grid-column: 1;
+        height: min-content;
+    }
+
+    .cv__card2 {
+        height: min-content;
+    }
+
+    .do-section__naming,
+    .do-section__number,
+    .about-section__text-paragraph,
+    .cv__card-headline {
+        font-size: clamp(28px, 4.4vw, 32px);
     }
 }
 
@@ -483,7 +505,7 @@ a {
 
 .portfolio-section__headline {
     color: #FFFFFF;
-    margin-top: clamp(90px, 32vw, 180px);
+    margin-top: clamp(90px, 30vw, 180px);
     margin-left: clamp(20px, 7.6vw, 45px);
     margin-right: clamp(20px, 7.6vw, 45px);
 }
@@ -619,7 +641,7 @@ a {
 }
 
 footer {
-    margin: 170px 0 0;
+    margin-top: clamp(90px, 30vw, 180px);
     font-size: clamp(28px, 2.6vw, 32px);
     line-height: 160%;
 }
@@ -632,7 +654,7 @@ footer {
 }
 
 .footer__info {
-    margin-top: 120px;
+    margin-top: clamp(60px, 10vw, 115px);
     margin-left: clamp(20px, 7.6vw, 45px);
     margin-right: clamp(20px, 7.6vw, 45px);
     display: grid;
@@ -670,12 +692,12 @@ footer {
     .footer__info {
         font-size: clamp(18px, 3.7vw, 28px);
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: clamp(20px, 7.5vw, 45px);
         line-height: clamp(130%, 6vw, 160%);
     }
 
     .footer__back-to-top {
-        margin-top: 40px;
+        margin-top: clamp(20px, 7.5vw, 45px);
     }
 
     .footer__links-arrow {
@@ -760,9 +782,11 @@ footer {
 
 html,
 html *,
-body {
+body,
+body * {
     cursor: none;
 }
+
 
 .cursor-dot,
 .cursor-dot-outline {
@@ -802,4 +826,11 @@ body {
     border-radius: 50%;
     border-width: 0px;
     border-color: #000;
+}
+
+@media (max-width: 480px) {
+    .cursor-dot,
+    .cursor-dot-outline {
+        display: none;
+    }
 }
