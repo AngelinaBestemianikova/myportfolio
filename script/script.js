@@ -8,19 +8,25 @@ $(document).ready(function () {
         });
     });
 
-    $('#Productscroll, #UI-UXscroll').click(function (e) {
+    $('#Graphicscroll').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#graphic').offset().top
+        }, 600);
+    });
+
+    $('#UI-UXscroll').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $('#UI-UX').offset().top
         }, 600);
     });
 
-
-    $('#Graphicscroll').click(function (e) {
+    $('#Modelingscroll').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $('#graphic').offset().top
-        }, 1000);
+            scrollTop: $('#modeling').offset().top
+        }, 1100);
     });
 
     //coursor
