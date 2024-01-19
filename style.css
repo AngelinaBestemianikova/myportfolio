@@ -371,12 +371,12 @@ a {
         grid-column-start: 1;
     }
 
-    #Productscroll {
+    #Graphicscroll {
         grid-row-start: 4;
         grid-column-start: 1;
     }
 
-    #Graphicscroll {
+    #Modelingscroll {
         grid-row-start: 5;
         grid-column-start: 1;
     }
